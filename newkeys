@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "giridhargcp",
+    "private_key_id": "312522412205c36b67a18308e4cc8cf8b68494cc",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCzLXmK3pkLdHGH\n7cP98sXbH2FuvAop65fX+gwohN24pt4b2Ln98zJUvfmfTTpNxCi4S1WPcmajyhfN\nNM/KEaMQbTYY0Ueq08pmUncd9deHyvxwy+ekLcpvMDynzBeOrKMKQLXJQlBJQAgu\n/YHJpRgTwT0EBzuyP0834UOSMMUa6h3gHuRKu5K2ozWWmQ2tNoRVYsyO22GDSp2v\n8O/G5SshMcg4CfxH9SiTO6zSpxWyexAyrn43YSymaV6t/W+vIN9Cj13cUDVfsYi0\nr5lx85b81yqJiXylDQAz6BoynBLBalrynepjxtVyLeAg8f1AdKJHRTRz8ubCFszV\nwZjwzIOJAgMBAAECggEACdIMP1hD+yS+tDyL6XdM8N2fcXpM9E89W1ERKYdev6gl\ntFEEoK6bq5ld/SU2dNyzfqZiYiJbDc8dztl+Kg0dauERffq6etpw1XrfnHzE+2Rc\nwbHrWExKNB3otSmygNdleEJjtEw2Kk2gJTMv0eWClFKbDYV3+CUQKnfmRDT4GKl0\nexcSFFl9QFIPEf4vJ20HCqsIsxPuMTPCD6e0Yy2GTG0glXaPoz3Qj8BESXgCG8EI\nROPy6wz/9lE49TtlBjql/ChUXhVAP+VvyFZzfx89QwuzULFPlwKN28U9xKmtPMZa\nH7OmiksWlDk2GGSR2B3Roe8rJdGLWTuC0PaSkNk0oQKBgQD9Ng1ROeS8Ru1aa8O1\nLnJgoND+fBb7Rf4SiLw/HJgCdiADxTo40AqKnhuH6S92eoxT/FOdJjmO/FL4MKwk\nI/k0mzF5CrTsgJa1OGqSDT99NN1ZGt2s8vl5NF3nSU7IDgPi4rgoCVsYAJ0m3Gho\nvmNleJBXCsNGVyFNnXxkq1/tbwKBgQC1Jq3/uMfmRZFo2O014tDKyGCIFCXONlFx\nQLyrVBJT3G3Gi2Oj+zvg1tkoNY/iOo87gVChR+VDV+aPFKs4CuSodVAsM47cLM+W\noyqHSAAwbK6soRXXFbNk6IM/Ua4VN2uty6MtHnA9NSTMiegRCcnX6E5x3bvNQyEc\nQ5MQZIOShwKBgQCUmG/gRxVQ2F7aPXuwi/1bb4S2k6P4+e5Meine76zVZPUMwWWV\niaFmD7sgW1wbL3fCocV/57rHipQ2Snn7C5FnqduyqPHcCOpolx8TburfU3LCo92L\nbVuyIWUqIf81r+Pf9iUUeckXoOSYtaggL/qsxcAPFKXcVa2Zmt4xRdEZyQKBgQCn\nAGu0rqMLNONi52l4HgwihiwIB5r6yrS2VdoZkL38teA2A9buG/UNyMQV/5sQErBt\nSUAOD3vaY7TX/1QBrHk0nEI3Haj8bgtKck4IvWX/PpKh7zd1PDpQMtKcky6LvLX2\nWR+rvr32j4HHVvOskXuVIkL/Uk2KY/KoXdu8Zw2tDQKBgQCey14tW2JUr//a5fld\nXcO8LXyAYG4sbxxxheK+c4rPPbsHk4yVH6q9+/m6D21cUoKWt/uphovWkakqGxXZ\nM8qDJoJk2v6b4bz9xCuC0SImonPMNUHBcGhT6NaE5P+X91+rBCPcNNRHxdBc3z1l\nuN/gDatnVy3p6j5a0J0zKh214A==\n-----END PRIVATE KEY-----\n",
+    "client_email": "deepsecurity@giridhargcp.iam.gserviceaccount.com",
+    "client_id": "101232192112048849207",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/deepsecurity%40giridhargcp.iam.gserviceaccount.com"
+  }
