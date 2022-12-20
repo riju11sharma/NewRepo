@@ -1,0 +1,95 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+    - gcloud
+    - functions
+    - deploy
+    - mns-fulfillment-webhook
+    - --region=us-central1
+    - --source=cloud_functions/language_payload_translation
+    - --trigger-http
+    - --runtime=python310
+    - --timeout=540
+    - --entry-point=mns_fulfilment 
+    - --service-account=$_SA_ACCOUNT
+    - --allow-unauthenticated
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: ssh
+    args: ['compute', 'ssh', '--zone=us-central1-a', '--project=minnesota-chatbot-dev', 'minnesota@vm-instance-botium']      
+
+  - name: 'gcr.io/cloud-builders/git'
+    id: clone
+    args: ['clone', 'https://${_GIT_PASSKEY}@github.com/springml-code/mn-dvs-chatbot.git', '-b' ,'dev']   
+    
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    id: test-en
+    waitFor:
+    - ssh
+    args:
+    - '-eEuo'
+    - 'pipefail'
+    - '-c'
+    - |-
+      apt-get update
+      apt-get install python -y
+      apt-get install pip -y
+      pip install google-cloud
+      pip install google-cloud-secret-manager
+      python3 botium-secret-en.py
+      apt-get install nodejs -y
+      apt-get install npm -y
+      npm install -g botium-cli
+      npm install -g botium-connector-dialogflowcx
+      botium-cli init
+      botium-cli run    
+    dir: 'test-suite-en'    
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    id: test-es
+    waitFor:
+    - ssh
+    args:
+    - '-eEuo'
+    - 'pipefail'
+    - '-c'
+    - |-
+      apt-get update
+      apt-get install python -y
+      apt-get install pip -y
+      pip install google-cloud
+      pip install google-cloud-secret-manager
+      python3 botium-secret-es.py
+      apt-get install nodejs -y
+      apt-get install npm -y
+      npm install -g botium-cli
+      npm install -g botium-connector-dialogflowcx
+      botium-cli init
+      botium-cli run    
+    dir: 'test-suite-es'  
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    id: test-hmn
+    waitFor:
+    - ssh
+    args:
+    - '-eEuo'
+    - 'pipefail'
+    - '-c'
+    - |-
+      apt-get update
+      apt-get install python -y
+      apt-get install pip -y
+      pip install google-cloud
+      pip install google-cloud-secret-manager
+      python3 botium-secret-hmn.py
+      apt-get install nodejs -y
+      apt-get install npm -y
+      npm install -g botium-cli
+      npm install -g botium-connector-dialogflowcx
+      botium-cli init
+      botium-cli run    
+    dir: 'test-suite-hmn' 
